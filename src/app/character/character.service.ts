@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class Character {
+export class CharacterService {
 
   private swUrl = 'https://swapi.co/api/people/1';
 
