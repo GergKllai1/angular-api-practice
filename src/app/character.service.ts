@@ -1,6 +1,7 @@
 import { ICharacter } from './character';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class Character {
@@ -9,7 +10,7 @@ export class Character {
 
   constructor(private http: HttpClient) {}
 
-  getCharacter() {
+  getCharacter(): Observable<ICharacter[]> {
     return this.http.get<ICharacter[]>(this.swUrl);
   }
 }
