@@ -10,7 +10,7 @@ export class CharacterService {
 
   constructor(private http: HttpClient) {}
 
-  getCharacter(): Observable<ICharacter[]> {
-    return this.http.get<ICharacter[]>(this.swUrl);
+  getCharacter() {
+    return this.http.get(this.swUrl);
   }
 }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character.component.css']
 })
 export class CharacterComponent implements OnInit {
-  public character = [];
+  public character = {};
 
   constructor(private characterService: CharacterService) { }
 
