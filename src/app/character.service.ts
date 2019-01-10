@@ -1,3 +1,4 @@
+import { ICharacter } from './character';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -9,6 +10,6 @@ export class Character {
   constructor(private http: HttpClient) {}
 
   getCharacter() {
-    return this.http.get(this.swUrl);
+    return this.http.get<ICharacter[]>(this.swUrl);
   }
 }
